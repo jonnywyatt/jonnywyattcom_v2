@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7 ]>
+<html class="ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]>
+<html class="ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]>
+<html class="ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8"/>
+
+  <!-- Uncomment to make IE8 render like IE7 -->
+  <!-- <meta http-equiv="X-UA-Compatible" content="IE=7" /> -->
+
+  <!-- Set the viewport width to device width for mobile -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <title><%= content_for?(:page_title) ? yield(:page_title) + ' - ' : '' %>Jon Wyatt - Front end web developer</title>
+
+  <%= stylesheet_link_tag "application" %>
+  <%= javascript_include_tag "modernizr/modernizr" %>
+  <%= csrf_meta_tags %>
+</head>
+
+<body>
+<header class="header spaced-vertical-bottom">
+  <div class="full-width">
+    <div class="header__logo"><span class="header__name">Jon Wyatt</span><span class="header__job-title">{ front end developer }</span>
+    </div>
+  </div>
+</header>
+<div class="full-width content">
+  <main class="content--main spaced-box<%= ' l-three-quarters' if content_for?(:secondary_content) %>">
+    <%= yield %>
+  </main>
+  <% if content_for(:secondary_content) %>
+    <aside class="l-one-quarter content--secondary spaced-box">
+      <%= yield :secondary_content %>
+    </aside>
+  <% end %>
+</div>
+<%= javascript_include_tag "requirejs/require" %>
+<script>
+  require(['/assets/require_config'], function () {
+    require(['application']);
+    <%= yield :javascript %>
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+.link {
+  @include transition(all, 0.1s, linear);
+  border-bottom: 1px solid transparent;
+  color: $colour-brown-dark;
+  text-decoration: none;
+  &:hover, &:focus {
+    border-bottom-color: $colour-yellow;
+    color: $colour-yellow;
+  }
+}
+
+.link--highlight {
+  color: $colour-blue-light;
+}
+
+.link--arrow {
+  margin-left: 20px;
+  position: relative;
+  &:before {
+    @include transition(left, 0.1s, ease-in);
+    content: "›";
+    color: $colour-brown;
+    font-family: Arial, sans-serif;
+    font-size: 1.2em;
+    font-weight: 100;
+    line-height: 1;
+    position: absolute;
+    left: -20px;
+  }
+  &:hover:before, &:focus:before {
+    left: -16px;
+  }
+}
+
+.link--arrow-left {
+  @extend .link--arrow;
+  &:before {
+    content: "‹";
+    left: -16px;
+  }
+  &:hover:before, &:focus:before {
+    left: -20px;
+  }
+}

@@ -1,0 +1,35 @@
+@import "colours";
+@import "css3";
+@import "fonts";
+@import "spacing";
+
+html {
+  font-size: 18px;
+}
+
+body {
+  font-family: 'oswaldlight', Arial, sans-serif;
+  font-weight: 300;
+  background-color: $colour-red-dark;
+  color: $colour-brown;
+}
+
+%heading {
+  font-family: 'oswaldlight', Verdana, Arial, sans-serif;
+  font-weight: 300;
+}
+
+.list {
+  margin: 0;
+  padding: 0;
+}
+
+.list__bullet {
+  list-style: none;
+  margin-bottom: $vertical-unit;
+}
+
+.text-small {
+  font-family: 'Arial Narrow', Arial, sans-serif;
+  font-size: 0.8rem;
+}

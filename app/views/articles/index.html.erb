@@ -1,0 +1,30 @@
+<% content_for :page_title do %>
+  Articles
+<% end %>
+
+<% @articles.each do |article| %>
+  <article class="article bottom-spacing">
+    <h2 class="article__heading-main"><%= link_to article.title, article_path(article), class: 'link--highlight' %></h2>
+    <div class="article__date-published bottom-spacing">
+      <%= article_format_date(article.date_published) %>
+    </div>
+    <div class="article__intro">
+      <%= article.intro.html_safe %>
+    </div>
+    <% if !article.text.nil? %>
+    <div class="article__more">
+      <%= link_to 'more...', article_path(article), class: 'link link--arrow' %>
+    </div>
+    <% end %>
+  </article>
+<% end %>
+
+<% content_for :secondary_content do %>
+  <p class="l-text-first">I'm a developer with breadth and depth of experience across varied industry sectors and technical approaches.</p>
+  <ul class="list">
+    <li class="list__bullet"><a class="link link--arrow link--highlight" href="/assets/docs/jon_wyatt_cv.doc">CV (Word)</a></li>
+    <li class="list__bullet">
+      <a class="link link--arrow link--highlight" href="http://uk.linkedin.com/in/jonwyatt" style="text-decoration:none;">LinkedIn
+        profile</a></li>
+  </ul>
+<% end %>

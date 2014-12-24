@@ -1,0 +1,104 @@
+@import "typography";
+
+@mixin subheading($width, $padding) {
+  &:before {
+    content: "";
+    background-color: $colour-blue-deep;
+    display: inline-block;
+    height: 0.9em;
+    margin-right: $padding + px;
+    width: $width + px;
+  }
+}
+
+$vertical-block-spacing: $vertical-unit * 4;
+
+.bottom-spacing {
+  margin-bottom: $vertical-block-spacing;
+}
+
+article {
+  @extend %clearfix;
+  border-bottom: 1px solid $colour-divider;
+  padding-bottom: $vertical-block-spacing;
+
+  %article-heading {
+    @extend %heading;
+    color: $colour-blue-light;
+  }
+
+  .article__heading-main {
+    @extend %article-heading;
+    font-size: 1.5rem;
+    @include subheading(12, 15);
+  }
+
+  h2 {
+    @extend %article-heading;
+    @include subheading(3, 8);
+    font-size: 1.2rem;
+    line-height: 1;
+    margin-top: 0;
+  }
+
+  p {
+    line-height: 1.6;
+  }
+
+  a {
+    @extend .link;
+  }
+
+  ul {
+    list-style: none;
+    > li > a {
+      @extend .link--arrow;
+    }
+  }
+
+  pre {
+    color: $colour-yellow-light;
+    margin-left: 40px;
+  }
+
+}
+
+.article__aside {
+  background-color: $colour-red-mid;
+  padding: 15px;
+  @include respond-to($mq-small) {
+    float: right;
+    margin-left: 15px;
+  }
+}
+
+.article__image {
+  img {
+    border: 3px solid $colour-red-mid;
+    display: block;
+    width: 100%;
+    @include respond-to($mq-small) {
+      width: 70%;
+    }
+  }
+}
+
+.article__image--small {
+  @include respond-to($mq-small) {
+    float: right;
+    margin-left: 20px;
+  }
+}
+
+.article__date-published {
+  font-size: 0.8rem;
+  font-style: italic;
+}
+
+.article__is-published {
+  margin-right: 10px;
+}
+
+.article__url {
+  margin-bottom: $vertical-unit * 2;
+}

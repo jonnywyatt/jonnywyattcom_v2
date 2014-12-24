@@ -1,0 +1,15 @@
+<article class="article bottom-spacing">
+  <h1 class="article__heading-main"><%= article.title %></h1>
+  <% if article.url? || article.tech_used? %>
+    <aside class="article__aside text-small bottom__spacing">
+      <%= ('<div class="article__url"><a class="link link--arrow" href="' + article.url + '">View site</a></div>').html_safe if article.url? %>
+      <%= article.tech_used.html_safe if article.tech_used? %>
+    </aside>
+  <% end %>
+  <div class="article__date-published bottom-spacing">
+    <%= article_format_date(article.date_published) %>
+  </div>
+  <%= article.intro.html_safe %>
+  <%= article.text.html_safe %>
+</article>
+

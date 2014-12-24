@@ -1,0 +1,14 @@
+{
+  "name": "foundation-libsass-template",
+  "version": "0.0.1",
+  "devDependencies": {
+    "node-sass": "~0.7.0",
+    "grunt": "~0.4.1",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt-sass": "~0.8.0",
+    "gulp-sass": "^1.2.4",
+    "gulp": "^3.8.10",
+    "gulp-sourcemaps": "^1.2.8",
+    "gulp-watch": "^3.0.0"
+  }
+}

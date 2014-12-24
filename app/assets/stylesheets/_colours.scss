@@ -1,0 +1,17 @@
+$colour-brown: #D9D2D0;
+$colour-brown-dark: darken($colour-brown, 20);
+$colour-brown-darker: darken($colour-brown, 30);
+$colour-brown-darkest: #8A7458;
+$colour-red-dark: #4D1F15;
+$colour-red-mid: lighten($colour-red-dark, 10);
+$colour-red-darkest: darken($colour-red-dark, 10);
+$colour-red-purple: #691C2A;
+$colour-white: #ffffff;
+$colour-black: #000000;
+$colour-off-white: #F0EDE4;
+$colour-blue-deep: #0367A6;
+$colour-blue-light: lighten($colour-blue-deep, 40);
+$colour-yellow: #F2E313;
+$colour-yellow-light: lighten($colour-yellow, 40);
+
+$colour-divider: $colour-brown-darkest;
