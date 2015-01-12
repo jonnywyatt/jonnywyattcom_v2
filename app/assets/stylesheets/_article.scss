@@ -56,11 +56,6 @@ article {
     }
   }
 
-  pre {
-    color: $colour-yellow-light;
-    margin-left: 40px;
-  }
-
 }
 
 .article__aside {
@@ -73,13 +68,14 @@ article {
 }
 
 .article__image {
+  width: 100%;
+  @include respond-to($mq-small) {
+    width: 35%;
+  }
   img {
     border: 3px solid $colour-red-mid;
     display: block;
     width: 100%;
-    @include respond-to($mq-small) {
-      width: 70%;
-    }
   }
 }
 
@@ -101,4 +97,9 @@ article {
 
 .article__url {
   margin-bottom: $vertical-unit * 2;
+}
+
+.article__code {
+  color: $colour-yellow-light;
+  margin-left: 40px;
 }
