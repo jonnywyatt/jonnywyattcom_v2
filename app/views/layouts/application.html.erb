@@ -43,7 +43,7 @@
 </div>
 <%= javascript_include_tag "requirejs/require" %>
 <script>
-  require(['/assets/require_config'], function () {
+  require(['/assets/require_config.js'], function () {
     require(['application']);
     <%= yield :javascript %>
   });
