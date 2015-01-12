@@ -21,5 +21,7 @@ module JonnywyattcomV2
     # config.i18n.default_locale = :de
 
     config.assets.enabled = false
+    config.assets.paths << Rails.root.join("vendor", "assets", "javascripts")
+    config.assets.paths << Rails.root.join("vendor", "assets", "bower_components")
   end
 end
