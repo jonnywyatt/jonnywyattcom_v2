@@ -80,6 +80,9 @@ GEM
       polyglot
       polyglot (>= 0.3.1)
     tzinfo (0.3.41)
+    yaml_db (0.3.0)
+      rails (>= 3.0, < 4.3)
+      rake (>= 0.8.7)
 
 PLATFORMS
   ruby
@@ -89,3 +92,4 @@ DEPENDENCIES
   rails (= 4.0.1)
   sdoc
   sqlite3
+  yaml_db

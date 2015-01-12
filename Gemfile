@@ -5,6 +5,7 @@ gem 'rails', '4.0.1'
 
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
+gem 'yaml_db'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
