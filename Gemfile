@@ -7,8 +7,14 @@ gem 'rails', '4.0.1'
 gem 'sqlite3'
 gem 'yaml_db'
 
+
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
+
+group :assets do
+  gem 'sass-rails'
+  gem 'uglifier'
+end
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
