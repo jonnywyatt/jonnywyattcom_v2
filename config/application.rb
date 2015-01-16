@@ -20,8 +20,9 @@ module JonnywyattcomV2
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
 
-    config.assets.enabled = false
+    config.assets.enabled = true
     config.assets.paths << Rails.root.join("vendor", "assets", "javascripts")
     config.assets.paths << Rails.root.join("vendor", "assets", "bower_components")
+    config.assets.precompile << "modernizr/modernizr.js"
   end
 end
