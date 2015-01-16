@@ -1,7 +1,6 @@
 {
-  "name": "foundation-libsass-template",
+  "name": "template",
   "dependencies": {
-    "foundation": "latest",
     "modernizr": "latest",
     "requirejs": "latest",
     "normalize-css": "latest"
