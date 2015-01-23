@@ -30,6 +30,8 @@ gem 'unicorn'
 
 gem 'rails_12factor', group: :production
 
+gem 'newrelic_rpm'
+
 # Use Capistrano for deployment
 # gem 'capistrano', group: :development
 
