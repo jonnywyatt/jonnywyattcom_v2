@@ -1,12 +1,16 @@
 @import "typography";
 
 @mixin subheading($width, $padding) {
+  position: relative;
+  padding-left: 10 + $padding + px;
   &:before {
     content: "";
     background-color: $colour-blue-deep;
-    display: inline-block;
-    height: 0.9em;
-    margin-right: $padding + px;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
     width: $width + px;
   }
 }
@@ -29,15 +33,15 @@ article {
 
   .article__heading-main {
     @extend %article-heading;
-    font-size: 1.5rem;
     @include subheading(12, 15);
+    font-size: 1.5rem;
+    line-height: 1.4;
   }
 
   h2 {
     @extend %article-heading;
     @include subheading(3, 8);
     font-size: 1.2rem;
-    line-height: 1;
     margin-top: 0;
   }
 
