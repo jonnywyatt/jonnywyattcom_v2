@@ -2,9 +2,13 @@
 @import "css3";
 @import "fonts";
 @import "spacing";
+@import "layout";
 
 html {
-  font-size: 18px;
+  font-size: 16px;
+  @include respond-to($mq-small) {
+    font-size: 18px;
+  }
 }
 
 body {
