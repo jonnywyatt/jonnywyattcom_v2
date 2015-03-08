@@ -5,3 +5,7 @@
   -o-transition: $transition-property $transition-time $method;
   transition: $transition-property $transition-time $method;
 }
+
+@mixin transition-color($prop, $time: 0.1s) {
+  @include transition($prop, $time, linear);
+}

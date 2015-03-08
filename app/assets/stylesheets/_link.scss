@@ -1,5 +1,5 @@
 .link {
-  @include transition(all, 0.1s, linear);
+  @include transition-color(all);
   border-bottom: 1px solid transparent;
   color: $colour-brown-dark;
   text-decoration: none;
