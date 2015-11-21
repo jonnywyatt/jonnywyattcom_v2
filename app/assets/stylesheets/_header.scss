@@ -16,7 +16,13 @@
 }
 
 .header__name {
+  display: block;
   margin-right: 30px;
+  margin-bottom: 10px;
+  @include respond-to($mq-small) {
+    display: inline;
+    margin: 0;
+  }
 }
 
 .header__job-title {
@@ -24,6 +30,7 @@
   display: inline-block;
   font-size: 0.8em;
   text-transform: none;
+  line-height: 1.2;
 }
 
 .header__strip {
