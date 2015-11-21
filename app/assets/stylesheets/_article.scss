@@ -87,6 +87,12 @@ article {
   }
 }
 
+.article__image--side-xs {
+  float: right;
+  margin-left: 20px;
+  width: 35%;
+}
+
 .article__image--small {
   @include respond-to($mq-small) {
     float: right;
