@@ -88,6 +88,12 @@ article {
   }
 }
 
+.article__image--full-width {
+  @include respond-to($mq-small) {
+    width: 100%;
+  }
+}
+
 .article__image--side-xs {
   float: right;
   margin-left: 20px;
