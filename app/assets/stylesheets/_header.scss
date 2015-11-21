@@ -33,6 +33,13 @@
   line-height: 1.2;
 }
 
+.header__job-title-highlight {
+  font-size: 0.8em;
+  color: $colour-yellow;
+  margin-left: 0.1em;
+  margin-right: 0.1em;
+}
+
 .header__strip {
   background-color: $colour-off-white;
 }
