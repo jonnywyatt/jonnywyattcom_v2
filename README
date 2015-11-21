@@ -1,1 +1,9 @@
-This file was created by JetBrains RubyMine 5.4.3.2.1 for binding GitHub repository
+## Style updates
+
+After which:
+
+```
+RAILS_ENV=production bin/rake assets:precompile
+```
+
+Before committing
