@@ -2,7 +2,7 @@
 
 @mixin subheading($width, $padding) {
   position: relative;
-  padding-left: 10 + $padding + px;
+  padding-left: 7 + $padding + px;
   &:before {
     content: "";
     background-color: $colour-blue-deep;
@@ -33,7 +33,7 @@ article {
 
   .article__heading-main {
     @extend %article-heading;
-    @include subheading(12, 15);
+    @include subheading(8, 15);
     font-size: 1.5rem;
     line-height: 1.4;
   }
@@ -46,7 +46,7 @@ article {
   }
 
   p {
-    line-height: 1.6;
+    line-height: 1.7;
   }
 
   a {

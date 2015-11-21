@@ -5,7 +5,7 @@
 @import "layout";
 
 html {
-  font-size: 16px;
+  font-size: 17px;
   @include respond-to($mq-small) {
     font-size: 18px;
   }
@@ -36,4 +36,8 @@ body {
 .text-small {
   font-family: 'Arial Narrow', Arial, sans-serif;
   font-size: 0.8rem;
+}
+
+small {
+  font-size: 0.8em;
 }

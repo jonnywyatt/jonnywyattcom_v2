@@ -38,10 +38,14 @@ $responsive: true;
   }
 }
 
+body {
+  margin: 0;
+  padding: 0;
+}
 .full-width {
-  margin-left: auto;
-  margin-right: auto;
-  width: 90%;
+  margin-left: 15px;
+  margin-right: 15px;
+  width: auto;
   max-width: $mq-large;
 }
 
